@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Profile | CareerBoost</title>
+
+    <link rel="stylesheet" href="css/edit-profile.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Header -->
+
+    <div class="header">
+
+        <button class="back-btn"
+                onclick="window.location.href='profile.html'">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+        </button>
+
+        <h2>Edit Profile</h2>
+
+    </div>
+
+<div class="form-group">
+
+    <label>Full Name</label>
+
+    <input
+            type="text"
+            id="fullName"
+            placeholder="Enter your full name">
+
+</div>
+    <!-- Form Card -->
+
+    <div class="card">
+
+        <div class="form-group">
+
+            <label>Phone Number</label>
+
+            <input
+                    type="text"
+                    id="phone"
+                    placeholder="Enter phone number">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Education</label>
+
+            <input
+                    type="text"
+                    id="education"
+                    placeholder="Ex. MCA">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>College</label>
+
+            <input
+                    type="text"
+                    id="college"
+                    placeholder="College Name">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Target Role</label>
+
+        
+         <select id="targetRole">
+            <option value="">Select Target Role</option>
+            <option>Java Developer</option>
+            <option>Java Full Stack Developer</option>
+            <option>Backend Developer</option>
+            <option>Frontend Developer</option>
+            <option>Android Developer</option>
+        </select>
+
+        <div class="form-group">
+
+
+<div class="form-group">
+
+    <label>Skills</label>
+
+    <div class="skill-input-box">
+
+        <input
+                type="text"
+                id="skillInput"
+                placeholder="Enter a skill (Example: Java)">
+
+        <button
+                type="button"
+                class="add-skill-btn"
+                onclick="addSkill()">
+
+            Add
+
+        </button>
+
+    </div>
+
+    <div id="skillsContainer">
+
+        <!-- Skill Chips -->
+    </div>
+
+</div>
+
+
+
+
+
+            <label>GitHub URL</label>
+
+            <input
+                    type="url"
+                    id="githubUrl"
+                    placeholder="https://github.com/username">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>LinkedIn URL</label>
+
+            <input
+                    type="url"
+                    id="linkedinUrl"
+                    placeholder="https://linkedin.com/in/username">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Portfolio URL</label>
+
+            <input
+                    type="url"
+                    id="portfolioUrl"
+                    placeholder="https://portfolio.com">
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Professional Summary</label>
+
+            <textarea
+                    id="summary"
+                    rows="5"
+                    placeholder="Write something about yourself..."></textarea>
+
+        </div>
+
+
+       
+
+
+        <button
+                class="save-btn"
+                onclick="saveProfile()">
+
+            Save Profile
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="js/edit-profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerBoost | Resume Analyzer</title>
+
+    <link rel="stylesheet" href="css/analysis.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Sidebar -->
+
+<div class="sidebar" id="sidebar">
+
+    <div class="logo">
+        CareerBoost
+    </div>
+
+    <ul>
+
+        <li onclick="goDashboard()">
+            <i class="fas fa-home"></i>
+            Dashboard
+        </li>
+
+        <li onclick="goProfile()">
+            <i class="fas fa-user"></i>
+            Profile
+        </li>
+
+        <li class="active">
+            <i class="fas fa-file-alt"></i>
+            Resume Analysis
+        </li>
+
+        <li onclick="goJD()">
+            <i class="fas fa-briefcase"></i>
+            Job Match
+        </li>
+
+        <li onclick="goQuiz()">
+            <i class="fas fa-circle-question"></i>
+            Quiz
+        </li>
+
+        <li onclick="goInterview()">
+            <i class="fas fa-comments"></i>
+            Interview
+        </li>
+
+    </ul>
+
+    <button class="logout-btn" onclick="logout()">
+
+        <i class="fas fa-right-from-bracket"></i>
+
+        Logout
+
+    </button>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+        <h2>AI Resume Analyzer</h2>
+
+    </div>
+
+    <!-- Upload Resume -->
+
+    <div class="upload-card">
+
+        <h2>Upload Resume</h2>
+
+        <input
+                type="file"
+                id="resumeFile"
+                accept=".pdf">
+
+        <button id="analyzeBtn">
+
+            Analyze Resume
+
+        </button>
+
+    </div>
+
+    <!-- Score -->
+
+    <div class="score-section">
+
+        <div class="score-card">
+
+            <h3>Resume Score</h3>
+
+            <h1 id="resumeScore">0</h1>
+
+        </div>
+
+        <div class="score-card">
+
+            <h3>ATS Score</h3>
+
+            <h1 id="atsScore">0</h1>
+
+        </div>
+
+    </div>
+
+    <!-- Strength -->
+
+    <div class="card">
+
+        <h2>Strengths</h2>
+
+        <ul id="strengthsList"></ul>
+
+    </div>
+
+    <!-- Weakness -->
+
+    <div class="card">
+
+        <h2>Weaknesses</h2>
+
+        <ul id="weaknessesList"></ul>
+
+    </div>
+
+    <!-- Missing Skills -->
+
+    <div class="card">
+
+        <h2>Missing Skills</h2>
+
+        <ul id="missingSkillsList"></ul>
+
+    </div>
+
+    
+
+    <!-- Keyword Analysis -->
+
+    <div class="card">
+
+        <h2>Keyword Analysis</h2>
+
+        <table>
+
+            <thead>
+
+            <tr>
+
+                <th>Keyword</th>
+
+                <th>Status</th>
+
+                <th>Context</th>
+
+            </tr>
+
+            </thead>
+
+            <tbody id="keywordTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+        <!-- ATS Suggestions -->
+
+    <div class="card">
+
+        <h2>ATS Suggestions</h2>
+
+        <ul id="atsSuggestionsList"></ul>
+
+    </div>
+
+    <!-- Project Suggestions -->
+
+    <div class="card">
+
+        <h2>Project Suggestions</h2>
+
+        <ul id="projectSuggestionsList"></ul>
+
+    </div>
+
+    <!-- Interview Tips -->
+
+    <div class="card">
+
+        <h2>Interview Tips</h2>
+
+        <ul id="interviewTipsList"></ul>
+
+    </div>
+
+    <!-- Learning Roadmap -->
+
+    <div class="card">
+
+        <h2>Learning Roadmap</h2>
+
+        <ul id="roadmapList"></ul>
+
+    </div>
+
+</div>
+
+<script src="js/analysis.js"></script>
+
+</body>
+
+</html>

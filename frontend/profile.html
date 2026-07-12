@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerBoost | Profile</title>
+
+    <link rel="stylesheet" href="css/profile.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+
+    <div class="logo">
+        CareerBoost
+    </div>
+
+    <ul>
+
+        <li onclick="goDashboard()">
+            <i class="fas fa-home"></i>
+            Dashboard
+        </li>
+
+        <li class="active">
+            <i class="fas fa-user"></i>
+            Profile
+        </li>
+
+        <li onclick="goResume()">
+            <i class="fas fa-file-alt"></i>
+            Resume Analysis
+        </li>
+
+        <li onclick="goJD()">
+            <i class="fas fa-briefcase"></i>
+            Job Match
+        </li>
+
+        <li onclick="goQuiz()">
+            <i class="fas fa-clipboard-list"></i>
+            Quiz
+        </li>
+
+        <li onclick="goInterview()">
+            <i class="fas fa-comments"></i>
+            Interview
+        </li>
+
+    </ul>
+
+    <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+    </button>
+
+</div>
+
+<!-- Main -->
+<div class="main" id="main">
+
+    <!-- Topbar -->
+    <div class="topbar">
+
+        <button class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <h2>My Profile</h2>
+
+    </div>
+
+    <!-- Profile Header -->
+    <div class="profile-header">
+
+        <div class="avatar">
+            <i class="fas fa-user-circle"></i>
+        </div>
+
+        <div>
+
+            <h2 id="fullName">Loading...</h2>
+
+            <p id="targetRole">
+                Java Developer
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- Cards -->
+    <div class="profile-grid">
+
+        <!-- Personal Info -->
+        <div class="card">
+
+            <h3>Personal Information</h3>
+
+            <p>
+                <strong>Email :</strong>
+                <span id="email"></span>
+            </p>
+
+            <p>
+                <strong>Phone :</strong>
+                <span id="phone"></span>
+            </p>
+
+            <p>
+                <strong>Education :</strong>
+                <span id="education"></span>
+            </p>
+
+            <p>
+                <strong>College :</strong>
+                <span id="college"></span>
+            </p>
+
+        </div>
+
+        <!-- Career -->
+        <div class="card">
+
+            <h3>Career Goal</h3>
+
+            <p id="roleText"></p>
+
+            <button class="edit-btn" onclick="goEditProfile()">
+             <i class="fas fa-pen"></i>
+         Edit Profile
+          </button>
+        </div>
+
+        <!-- Skills -->
+        <div class="card">
+
+            <h3>Skills</h3>
+
+            <div id="skillsContainer">
+
+            </div>
+
+        </div>
+
+        <!-- Links -->
+        <div class="card">
+
+            <h3>Professional Links</h3>
+
+            <p>
+                <strong>GitHub</strong>
+            </p>
+
+            <a id="github" target="_blank"></a>
+
+            <p>
+                <strong>LinkedIn</strong>
+            </p>
+
+            <a id="linkedin" target="_blank"></a>
+
+            <p>
+                <strong>Portfolio</strong>
+            </p>
+
+            <a id="portfolio" target="_blank"></a>
+
+        </div>
+
+        <!-- Summary -->
+        <div class="card summary-card">
+
+            <h3>Professional Summary</h3>
+
+            <p id="summary">
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="js/profile.js"></script>
+
+</body>
+</html>

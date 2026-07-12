@@ -1,0 +1,289 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#F8F5FF;
+    color:#1F2937;
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+}
+
+.header h2{
+    font-size:30px;
+    font-weight:600;
+    color:#7C3AED;
+}
+
+.back-btn{
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:12px;
+    background:#7C3AED;
+    color:#fff;
+    cursor:pointer;
+    font-size:18px;
+    transition:.3s;
+}
+
+.back-btn:hover{
+    background:#A855F7;
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ===========================
+   Form
+=========================== */
+
+.form-group{
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:#1F2937;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+    padding:14px 16px;
+
+    border:1px solid #ddd;
+    border-radius:12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.form-group textarea{
+    resize:vertical;
+    min-height:130px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{
+
+    border-color:#7C3AED;
+    box-shadow:0 0 0 3px rgba(124,58,237,.15);
+
+}
+
+/* ===========================
+   Skills
+=========================== */
+
+/* ===========================
+   Skill Input
+=========================== */
+
+.skill-input-box{
+
+    display:flex;
+    gap:10px;
+    margin-bottom:15px;
+
+}
+
+.skill-input-box input{
+
+    flex:1;
+
+}
+
+.add-skill-btn{
+
+    background:#7C3AED;
+    color:white;
+
+    border:none;
+
+    padding:0 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.add-skill-btn:hover{
+
+    background:#A855F7;
+
+}
+
+
+/* ===========================
+   Skills Container
+=========================== */
+
+#skillsContainer{
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+
+/* Skill Chip */
+
+.skill-chip{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    background:#F3E8FF;
+
+    color:#7C3AED;
+
+    padding:10px 16px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+
+/* Remove Button */
+
+.remove-skill{
+
+    cursor:pointer;
+
+    color:#EF4444;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+    .container{
+
+        margin:20px auto;
+        padding:15px;
+
+    }
+
+    .card{
+
+        padding:22px;
+
+    }
+
+    .header h2{
+
+        font-size:24px;
+
+    }
+
+    .save-btn{
+
+        font-size:16px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .header{
+
+        gap:10px;
+
+    }
+
+    .back-btn{
+
+        width:40px;
+        height:40px;
+
+    }
+
+    .header h2{
+
+        font-size:22px;
+
+    }
+
+    .card{
+
+        padding:18px;
+
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+
+        font-size:14px;
+
+    }
+
+    .skill-chip{
+
+        width:100%;
+        justify-content:flex-start;
+
+    }
+
+}

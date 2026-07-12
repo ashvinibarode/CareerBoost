@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerBoost Dashboard</title>
+
+    <link rel="stylesheet"
+          href="css/dashboard.css">
+
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div id="overlay"></div>
+
+<div class="container">
+
+    <!-- Sidebar -->
+
+    <aside id="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-rocket"></i>
+
+                <span class="logo-text">
+
+                    CareerBoost
+
+                </span>
+
+            </div>
+
+            <ul>
+
+                <li class="active"
+                    onclick="goDashboard()">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </li>
+
+
+                <li onclick="openResume()">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    <span>Resume</span>
+
+                </li>
+
+
+
+                <li onclick="openJD()">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <span>Job Matching</span>
+
+                </li>
+
+
+
+                <li onclick="openQuiz()">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <span>Quiz Assessment</span>
+
+                </li>
+
+
+
+                <li onclick="openInterview()">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                    <span>Interview</span>
+
+                </li>
+
+
+
+                <li onclick="openProfile()">
+
+                    <i class="fa-solid fa-user"></i>
+
+                    <span>Profile</span>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <button class="logout-btn"
+                onclick="logout()">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+
+            <span>Logout</span>
+
+        </button>
+
+    </aside>
+
+
+
+    <!-- Main Content -->
+
+    <main id="mainContent">
+
+        <!-- Header -->
+
+        <header>
+
+            <button id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+            <h2>
+
+                Dashboard
+
+            </h2>
+
+        </header>
+
+
+
+        <!-- Welcome -->
+
+        <section class="welcome">
+
+            <h1>
+
+                Welcome,
+
+                <span id="userName">
+
+                    User
+
+                </span>
+
+                👋
+
+            </h1>
+
+            <p>
+
+                Continue your AI-powered career preparation.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- Cards -->
+
+        <section class="dashboard-grid">
+
+
+
+            <!-- Resume -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                </div>
+
+                <h2>
+
+                    Resume Analysis
+
+                </h2>
+
+                <p>
+
+                   Analyis your resume with AI.
+
+                </p>
+
+                <p id="resumeName"></p>
+
+                <p id="uploadDate"></p>
+
+                <button
+                        onclick="openResume()">
+
+                    Start Analysis 
+
+                </button>
+                
+            </div>
+
+
+
+
+            <!-- Profile -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <h2>
+
+                    Profile
+
+                </h2>
+
+                <p id="email"></p>
+
+                <button
+                        onclick="openProfile()">
+
+                    View Profile
+
+                </button>
+
+            </div>
+
+
+
+
+            <!-- Job Matching -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                </div>
+
+                <h2>
+
+                    Job Matching
+
+                </h2>
+
+                <p>
+
+                    Match your resume with any Job Description.
+
+                </p>
+
+                <button
+                        onclick="openJD()">
+
+                    Start Matching
+
+                </button>
+
+            </div>
+
+
+
+
+            <!-- Quiz -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                </div>
+
+                <h2>
+
+                    Quiz Assessment
+
+                </h2>
+
+                <p>
+
+                    Test your technical skills.
+
+                </p>
+
+                <button
+                        onclick="openQuiz()">
+
+                    Start Quiz
+
+                </button>
+
+            </div>
+
+
+
+
+            <!-- Interview -->
+
+            <div class="card">
+
+                <div class="card-icon">
+
+                    <i class="fa-solid fa-user-tie"></i>
+
+                </div>
+
+                <h2>
+
+                    AI Interview
+
+                </h2>
+
+                <p>
+
+                    Practice AI-generated interview questions.
+
+                </p>
+
+                <button
+                        onclick="openInterview()">
+
+                    Practice Now
+
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

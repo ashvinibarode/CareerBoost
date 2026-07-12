@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerBoost | AI Interview</title>
+
+    <link rel="stylesheet" href="css/interview.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Sidebar -->
+
+<div class="sidebar" id="sidebar">
+
+    <div class="logo">
+        CareerBoost
+    </div>
+
+    <ul>
+
+        <li onclick="goDashboard()">
+            <i class="fas fa-home"></i>
+            Dashboard
+        </li>
+
+        <li onclick="goProfile()">
+            <i class="fas fa-user"></i>
+            Profile
+        </li>
+
+        <li onclick="goResume()">
+            <i class="fas fa-file-alt"></i>
+            Resume Analysis
+        </li>
+
+        <li onclick="goJD()">
+            <i class="fas fa-briefcase"></i>
+            Job Match
+        </li>
+
+        <li onclick="goQuiz()">
+            <i class="fas fa-list-check"></i>
+            Quiz
+        </li>
+
+        <li class="active">
+            <i class="fas fa-comments"></i>
+            Interview
+        </li>
+
+    </ul>
+
+    <button class="logout-btn" onclick="logout()">
+        <i class="fas fa-sign-out-alt"></i>
+        Logout
+    </button>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+    <!-- Topbar -->
+
+    <div class="topbar">
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+        <h2>AI Interview Preparation</h2>
+
+    </div>
+
+    <!-- Form -->
+
+    <div class="form-card">
+
+        <h3>Generate Interview Questions</h3>
+
+        <div class="form-group">
+
+            <div class="form-group">
+
+    <label>Technology</label>
+
+    <input
+        type="text"
+        id="technology"
+        placeholder="Example: Java, Spring Boot, Python, React">
+
+</div>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Level</label>
+
+            <select id="level">
+
+                <option value="">Select Level</option>
+
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+
+            </select>
+
+        </div>
+
+        <div class="form-group">
+
+            <label>Interview Type</label>
+
+            <select id="type">
+
+                <option value="">Select Type</option>
+
+                <option>Technical</option>
+                <option>HR</option>
+                <option>Mixed</option>
+
+            </select>
+
+        </div>
+
+        <button
+                class="generate-btn"
+                onclick="generateQuestions()">
+
+            <i class="fas fa-wand-magic-sparkles"></i>
+
+            Generate Questions
+
+        </button>
+
+    </div>
+
+    <!-- Loading -->
+
+    <div
+            class="loading"
+            id="loading"
+            style="display:none;">
+
+        <i class="fas fa-spinner fa-spin"></i>
+
+        Generating AI Questions...
+
+    </div>
+
+    <!-- Questions -->
+
+    <div
+            id="questionsContainer"
+            class="questions-container">
+
+        <!-- Dynamic Cards -->
+
+    </div>
+
+</div>
+
+<script src="js/interview.js"></script>
+
+</body>
+</html>

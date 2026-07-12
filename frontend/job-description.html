@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>CareerBoost | Job Match</title>
+
+    <link rel="stylesheet" href="css/analysis.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- Sidebar -->
+
+<div class="sidebar" id="sidebar">
+
+    <div class="logo">
+        CareerBoost
+    </div>
+
+    <ul>
+
+        <li onclick="goDashboard()">
+            <i class="fas fa-home"></i>
+            Dashboard
+        </li>
+
+        <li onclick="goProfile()">
+            <i class="fas fa-user"></i>
+            Profile
+        </li>
+
+        <li onclick="goResume()">
+            <i class="fas fa-file-alt"></i>
+            Resume Analysis
+        </li>
+
+        <li class="active">
+            <i class="fas fa-briefcase"></i>
+            Job Match
+        </li>
+
+        <li onclick="goQuiz()">
+            <i class="fas fa-circle-question"></i>
+            Quiz
+        </li>
+
+        <li onclick="goInterview()">
+            <i class="fas fa-comments"></i>
+            Interview
+        </li>
+
+    </ul>
+
+    <button class="logout-btn"
+            onclick="logout()">
+
+        <i class="fas fa-right-from-bracket"></i>
+
+        Logout
+
+    </button>
+
+</div>
+
+<!-- Main -->
+
+<div class="main">
+
+    <div class="topbar">
+
+        <button class="menu-btn" id="menuBtn">
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+        <h2>Resume vs Job Description</h2>
+
+    </div>
+
+    <!-- Upload Section -->
+
+    <div class="upload-card">
+
+        <h2>Compare Resume with Job Description</h2>
+
+        <input
+                type="file"
+                id="jdResumeFile"
+                accept=".pdf">
+
+        <textarea
+                id="jobDescription"
+                rows="8"
+                placeholder="Paste Job Description Here..."></textarea>
+
+        <button id="compareBtn">
+
+            Compare Resume
+
+        </button>
+
+    </div>
+
+    <!-- Match Score -->
+
+    <div class="score-card">
+
+        <h2>Match Score</h2>
+
+        <h1 id="matchScore">0%</h1>
+
+    </div>
+        <!-- Matched Skills -->
+
+    <div class="card">
+
+        <h2>Matched Skills</h2>
+
+        <ul id="matchedSkillsList"></ul>
+
+    </div>
+
+    <!-- Missing Skills -->
+
+    <div class="card">
+
+        <h2>Missing Skills</h2>
+
+        <ul id="jdMissingSkillsList"></ul>
+
+    </div>
+
+    <!-- Missing Keywords -->
+
+    <div class="card">
+
+        <h2>Missing Keywords</h2>
+
+        <ul id="missingKeywordsList"></ul>
+
+    </div>
+
+    <!-- Keyword Suggestions -->
+
+    <div class="card">
+
+        <h2>Keyword Suggestions</h2>
+
+        <ul id="keywordSuggestionsList"></ul>
+
+    </div>
+
+    <!-- Improvement Suggestions -->
+
+    <div class="card">
+
+        <h2>Improvement Suggestions</h2>
+
+        <ul id="improvementSuggestionsList"></ul>
+
+    </div>
+
+</div>
+
+<script src="js/analysis.js"></script>
+
+</body>
+
+</html>

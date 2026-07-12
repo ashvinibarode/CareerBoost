@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+body {
+    background: #F8F5FF;
+    color: #1F2937;
+}
+
+
+/* =====================
+   Sidebar
+===================== */
+
+.sidebar {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 260px;
+    height: 100vh;
+
+    background: #7C3AED;
+    color: white;
+
+    padding: 25px 20px;
+
+    transition: 0.3s;
+
+    z-index: 1000;
+}
+
+
+.logo {
+
+    font-size: 25px;
+    font-weight: 700;
+
+    margin-bottom: 40px;
+}
+
+
+.sidebar ul {
+
+    list-style: none;
+}
+
+
+.sidebar ul li {
+
+    padding: 14px 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    transition: 0.3s;
+}
+
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+
+    background: #A855F7;
+
+}
+
+
+.logout-btn {
+
+    position: absolute;
+
+    bottom: 30px;
+    left: 20px;
+
+    width: calc(100% - 40px);
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: white;
+
+    color: #7C3AED;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+
+
+
+/* =====================
+ Main Section
+===================== */
+
+
+.main {
+
+    margin-left: 260px;
+
+    padding: 25px;
+
+    transition: 0.3s;
+
+}
+
+
+/* Topbar */
+
+.topbar {
+
+    background: white;
+
+    padding: 15px 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.menu-btn {
+
+    display: none;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 22px;
+
+    color: #7C3AED;
+
+}
+
+
+
+/* =====================
+ Profile Header
+===================== */
+
+
+.profile-header {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.avatar {
+
+    font-size: 80px;
+
+    color: #7C3AED;
+
+}
+
+
+.profile-header h2 {
+
+    font-size: 28px;
+
+}
+
+
+.profile-header p {
+
+    color: #6B7280;
+
+    margin-top: 5px;
+
+}
+
+
+
+/* =====================
+ Cards
+===================== */
+
+
+.profile-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+
+}
+
+
+
+.card {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+
+}
+
+
+.card h3 {
+
+    color: #7C3AED;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+.card p {
+
+    margin-bottom: 12px;
+
+    color: #6B7280;
+
+}
+
+
+
+.card strong {
+
+    color: #1F2937;
+
+}
+
+
+
+/* Skills */
+
+#skillsContainer {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+}
+
+
+.skill {
+
+    background: #F3E8FF;
+
+    color: #7C3AED;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+}
+
+
+
+/* Links */
+
+.card a {
+
+    color: #7C3AED;
+
+    text-decoration: none;
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    word-break: break-word;
+
+}
+
+
+
+/* Summary */
+
+.summary-card {
+
+    grid-column: span 2;
+
+}
+
+
+
+/* Button */
+
+.edit-btn {
+
+    margin-top: 20px;
+
+    padding: 12px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #7C3AED;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.edit-btn:hover {
+
+    background: #A855F7;
+
+}
+
+
+
+/* Overlay */
+
+.overlay {
+
+    display: none;
+
+}
+
+
+
+/* =====================
+ Mobile Responsive
+===================== */
+
+
+@media(max-width:900px){
+
+
+.sidebar {
+
+    transform: translateX(-100%);
+
+}
+
+
+.sidebar.show {
+
+    transform: translateX(0);
+
+}
+
+
+
+.main {
+
+    margin-left: 0;
+
+}
+
+
+
+.menu-btn {
+
+    display: block;
+
+}
+
+
+
+.profile-grid {
+
+    grid-template-columns: 1fr;
+
+}
+
+
+
+.summary-card {
+
+    grid-column: span 1;
+
+}
+
+
+
+.profile-header {
+
+    flex-direction: column;
+
+    text-align: center;
+
+}
+
+
+
+.overlay.active {
+
+    display: block;
+
+    position: fixed;
+
+    inset:0;
+
+    background: rgba(0,0,0,0.3);
+
+    z-index:999;
+
+}
+
+
+}
