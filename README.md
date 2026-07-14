@@ -218,28 +218,40 @@ or use **Live Server** in VS Code.
 
 ---
 
+
 # 📸 Screenshots
 
-### Login Page
+## Login Page
 
-
-
-### Dashboard
-
-
-
-### Resume Analyzer
-
-
-
-### Job Match
-
-
-
-### Quiz
-
+![Login Page](screenshots/login.png)
 
 ---
+
+## Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+## Resume Analyzer
+
+![Resume Analyzer](screenshots/resume-analyzer.png)
+
+---
+
+## Job Match
+
+![Job Match](screenshots/jd-analyzer.png)
+---
+## Job Match
+
+![Quiz](screenshots/quiz.png)
+---
+## Job Match
+
+![AI Interview](screenshots/interview.png)
+---
+****
 
 # 👨‍💻 Author
 
