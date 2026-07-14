@@ -8,7 +8,7 @@ form.addEventListener("submit", async function (e) {
 
     
 
-const API_URL = "http://localhost:8080/api/auth/register";
+const API_URL = "https://careerboost-backend-zkdt.onrender.com/api/auth/register";
 
 
 // Password Toggle

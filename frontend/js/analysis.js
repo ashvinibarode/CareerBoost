@@ -1,6 +1,6 @@
 
 
-const API_BASE = "http://localhost:8080";
+const API_BASE = "https://careerboost-backend-zkdt.onrender.com";
 
 const ANALYZE_API = API_BASE + "/ai/resume/pdf";
 const JD_COMPARE_API = API_BASE + "/jd/analyze";

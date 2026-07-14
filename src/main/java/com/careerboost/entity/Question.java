@@ -17,18 +17,23 @@ public class Question {
     @Column(columnDefinition = "TEXT")
     private String question;
 
+    @Column(name = "optiona")
     private String optionA;
+
+    @Column(name = "optionb")
     private String optionB;
+
+    @Column(name = "optionc")
     private String optionC;
+
+    @Column(name = "optiond")
     private String optionD;
 
+    @Column(name = "correct_answer")
     private String correctAnswer;
 
     @Column(columnDefinition = "TEXT")
     private String explanation;
-
-    public Question() {
-    }
 
     public Long getId() {
         return id;
