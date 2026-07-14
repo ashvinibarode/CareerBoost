@@ -243,11 +243,11 @@ or use **Live Server** in VS Code.
 
 ![Job Match](screenshots/jd-analyzer.png)
 ---
-## Job Match
+## Quiz
 
 ![Quiz](screenshots/quiz.png)
 ---
-## Job Match
+## AI Interview
 
 ![AI Interview](screenshots/interview.png)
 ---
