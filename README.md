@@ -1,12 +1,24 @@
 # 🚀 CareerBoost
 
-> An AI-powered Career Preparation Platform that helps students and job seekers improve their resumes, compare them with job descriptions, practice interviews, and assess technical skills.
+> An AI-powered Career Preparation Platform that helps students and job seekers improve their resumes, compare them with job descriptions, practice AI interviews, and assess technical skills.
 
 ---
 
-## 📌 Overview
+# 🌐 Live Demo
 
-CareerBoost is a Java Full Stack web application built using **Spring Boot**, **MySQL**, and **Google Gemini AI**. It provides intelligent resume analysis, ATS score evaluation, job description matching, interview preparation, and technical quizzes to help users become job-ready.
+| Service | Link |
+|----------|------|
+| 🚀 Frontend (Netlify) | https://idyllic-pothos-75d196.netlify.app/|
+| ⚙️ Backend API (Render) | https://careerboost-backend-zkdt.onrender.com|
+| 🗄️ Database | Railway MySQL |
+
+---
+
+# 📌 Overview
+
+CareerBoost is a Full Stack AI-powered web application developed using **Java 17**, **Spring Boot**, **Spring AI**, **MySQL**, and **Google Gemini 2.5 Flash API**.
+
+The platform helps students and job seekers improve their resumes, compare resumes with job descriptions, practice technical interviews, and evaluate technical knowledge through quizzes.
 
 ---
 
@@ -36,8 +48,8 @@ CareerBoost is a Java Full Stack web application built using **Spring Boot**, **
 - Matched Skills
 - Missing Skills
 - Missing Keywords
+- Keyword Suggestions
 - Resume Improvement Suggestions
-- Keyword Recommendations
 
 ---
 
@@ -50,9 +62,11 @@ CareerBoost is a Java Full Stack web application built using **Spring Boot**, **
 
 ---
 
-## 📝 Quiz Module
+## 📝 Technical Quiz
 
-- Technical MCQs
+- Technology-wise Quiz
+- Difficulty Selection
+- MCQ Practice
 - Automatic Score Calculation
 - Performance Analysis
 
@@ -61,37 +75,54 @@ CareerBoost is a Java Full Stack web application built using **Spring Boot**, **
 ## 🎤 AI Interview Preparation
 
 - AI-generated Interview Questions
-- Role-based Questions
+- Technology-based Questions
+- Difficulty Levels
 - Interview Practice
 
 ---
 
 # 🛠 Tech Stack
 
-### Backend
+## Backend
 
 - Java 17
 - Spring Boot
 - Spring AI
 - Spring Data JPA
-- REST API
+- REST APIs
 - Maven
 
-### Frontend
+---
+
+## Frontend
 
 - HTML5
 - CSS3
 - JavaScript
 
-### Database
+---
 
-- MySQL
+## Database
 
-### AI
+- MySQL (Railway)
+
+---
+
+## AI
 
 - Google Gemini 2.5 Flash API
 
-### Tools
+---
+
+## Deployment
+
+- Netlify (Frontend)
+- Render (Backend)
+- Railway (Database)
+
+---
+
+## Tools
 
 - IntelliJ IDEA
 - VS Code
@@ -103,7 +134,7 @@ CareerBoost is a Java Full Stack web application built using **Spring Boot**, **
 
 # 📂 Project Structure
 
-```
+```text
 CareerBoost
 │
 ├── frontend
@@ -113,7 +144,9 @@ CareerBoost
 │   ├── dashboard.html
 │   ├── resume.html
 │   ├── job-description.html
-│   └── ...
+│   ├── quiz.html
+│   ├── interview.html
+│   └── profile.html
 │
 ├── src
 │   ├── controller
@@ -132,7 +165,7 @@ CareerBoost
 
 # ⚙️ Installation
 
-### Clone Repository
+## Clone Repository
 
 ```bash
 git clone https://github.com/ashvinibarode/CareerBoost.git
@@ -144,13 +177,13 @@ Open the project in IntelliJ IDEA.
 
 ## Configure Database
 
-Create a MySQL database.
+Create MySQL Database
 
 ```sql
 CREATE DATABASE careerboost_db;
 ```
 
-Update `application.properties`:
+Update `application.properties`
 
 ```properties
 spring.datasource.url=jdbc:mysql://localhost:3306/careerboost_db
@@ -168,7 +201,7 @@ spring.ai.google.genai.api-key=YOUR_GEMINI_API_KEY
 mvn spring-boot:run
 ```
 
-Application will start at
+Backend will start on
 
 ```
 http://localhost:8080
@@ -184,46 +217,42 @@ Open
 frontend/login.html
 ```
 
-or use **Live Server** in VS Code.
+or use Live Server in VS Code.
 
 ---
 
-# 🔗 REST API
+# 🔗 REST APIs
 
 | Method | Endpoint | Description |
 |---------|----------|-------------|
 | POST | `/auth/register` | Register User |
 | POST | `/auth/login` | User Login |
-| POST | `/ai/resume/pdf` | AI Resume Analysis |
-| POST | `/jd/analyze` | Resume vs Job Description |
 | GET | `/dashboard/{userId}` | Dashboard |
 | GET | `/profile/{userId}` | User Profile |
 | PUT | `/profile/update` | Update Profile |
-| GET | `/quiz` | Get Quiz |
+| POST | `/ai/resume/pdf` | Resume Analysis |
+| POST | `/jd/analyze` | Resume vs Job Description |
+| GET | `/quiz/{technology}` | Get Quiz |
 | POST | `/quiz/submit` | Submit Quiz |
 | POST | `/interview` | AI Interview Questions |
 
 ---
 
-# 🚀 Future Enhancements
+# ☁️ Deployment
 
-- JWT Authentication
-- Resume Builder
-- Resume Download (PDF)
-- Admin Dashboard
-- Email Notifications
-- Docker Deployment
-- Cloud Deployment
-- Multi-language Support
+| Service | Platform |
+|----------|----------|
+| Frontend | Netlify |
+| Backend | Render |
+| Database | Railway MySQL |
 
 ---
 
-
 # 📸 Screenshots
 
-## Login Page
+## Login
 
-![Login Page](screenshots/login.png)
+![Login](screenshots/login.png)
 
 ---
 
@@ -239,31 +268,49 @@ or use **Live Server** in VS Code.
 
 ---
 
-## Job Match
+## Resume vs Job Description
 
 ![Job Match](screenshots/jd-analyzer.png)
+
 ---
-## Quiz
+
+## Technical Quiz
 
 ![Quiz](screenshots/quiz.png)
+
 ---
+
 ## AI Interview
 
-![AI Interview](screenshots/interview.png)
+![Interview](screenshots/interview.png)
+
 ---
-****
+
+# 🚀 Future Improvements
+
+- JWT Authentication
+- Resume Builder
+- Resume Download (PDF)
+- Admin Dashboard
+- Email Notifications
+- Docker Support
+- Dark Mode
+- Multi-language Support
+
+---
 
 # 👨‍💻 Author
 
 **Ashvini Barode**
 
-🎓 MCA Student  
-💻 Java Full Stack Developer  
-🤖 Spring Boot & AI Enthusiast
+🎓 MCA Student
 
+💻 Java Full Stack Developer
+
+🤖 Spring Boot | Spring AI | REST APIs | MySQL
 
 ---
 
 ## ⭐ Support
 
-If you found this project useful, consider giving it a **Star ⭐** on GitHub.
+If you found this project useful, please consider giving it a **Star ⭐** on GitHub.
