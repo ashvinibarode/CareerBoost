@@ -1,4 +1,4 @@
-const BASE_URL = "https://careerboost-backend-zkdt.onrender.com";
+const BASE_URL = "https://careerboost-backend-zkdt.onrender.com/quiz/java";
 
 const userId = localStorage.getItem("userId");
 
